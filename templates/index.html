@@ -1,0 +1,27 @@
+<!doctype html>
+<head>
+  <title>Anime Op Youtube Downloader</title>
+  <link rel="stylesheet" href="/../css/index.css">
+</head>
+<style>
+  .input-box {
+    width: 50px;
+  }
+</style>
+<body>
+  <section class="content">
+    <form action="{{ url_for('anime_home')}}" method="POST">
+      <label for="name">Anime Name:</label>
+      <input type="text" id="name" name="name" value="Name"><br><br>
+      <select name="op_or_ed" id="op_or_ed">
+        <option value="opening">Opening</option>
+        <option value="ending">Ending</option>
+      </select>
+      <label for="number">Number</label>
+      <input class="input-box" type="number" id="number" name="number" value="1"><br><br>
+      <label for="path">Save to Folder:</label><br>
+      <input type="file" id="path" name="path" webkitdirectory directory multiple><br><br>
+      <input type="submit" value="Submit">
+    </form> 
+  </section>
+</body>
